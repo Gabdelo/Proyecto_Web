@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fondo-general{
+    background-color: rgb(223, 223, 223);
+}
+.navbar{
+    background-color: rgb(253, 253, 253);
+}
+.nav-link:hover{
+    color: rgb(29, 29, 28);
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+}
+.carta-main{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.icono-carta{
+    font-size: 50px;
+    color: rgb(223, 236, 31);
+}
+.fondo{
+   background-image: url(../IMAGENES/diversos-empresarios-reunidos.jpg);
+   background-size: cover;
+   mask-image: linear-gradient(rgb(158, 155, 149) 95%, transparent);
+}
+.btn-primary{
+    align-items: center;
+    color: rgb(223, 236, 31);
+    background-color: rgb(23, 23, 54);
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+}
+.btn-primary:hover{
+    color: rgb(23, 23, 54);
+    background-color: rgb(223, 236, 31);
+    transform: scale(1.1);
+}
+.seccion2{
+    background-color: rgb(223, 223, 223);
+}
+.carta{
+    background-color: rgb(23, 23, 54);
+    transition: transform 0.3s ease;
+}
+.carta-texto{
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+.carta:hover{
+    transform: scale(1.1);
+    background-color: rgb(223, 236, 31);
+    .carta-texto{
+        color: rgb(23, 23, 54);;
+    }
+    .icono-carta{
+        color: rgb(23, 23, 54);;
+    }
+}
+.caja{
+    min-width: 250px;
+    animation: 20s scroll infinite linear;
+    align-items: center;
+}
+.caja img{
+    object-fit: cover;
+    height: 60px;
+    align-items: center;
+}
+.scroll-container{
+    overflow: hidden;
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+ 
