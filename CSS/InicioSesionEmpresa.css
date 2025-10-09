@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+.fondo-general{  
+    background-color: rgb(24, 24, 24);
+}
+.imagen{
+    height: 60px;
+    width: 200px;
+}
+
+.fondo{
+   background-image: url(../IMAGENES/lasallef2.jpg );
+   background-size: cover;
+   mask-image: linear-gradient(rgba(0, 0, 0) 90%, transparent);
+   justify-items: center;
+   height: 100vh;
+}
+.btn{
+    align-items: center;
+    background-color: rgb(218, 255, 6);
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+}
+.btn a{
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+}
+
+.botones-reg{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botones-reg button{
+    margin-top: 40px;
+}
+.btn:hover{
+    background-color: rgb(223, 236, 31);
+    transform: scale(1.1);
+    a{
+    color: rgb(23, 23, 54);
+    }
+}
+
+#etiqueta{
+    color: white;
+}
+#elementoForm{
+    margin-top: 20px;
+}
