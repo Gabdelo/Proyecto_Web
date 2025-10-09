@@ -1,50 +1,120 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
+    position: relative;
 }
-.fondo-general{
-    background-color: rgb(223, 223, 223);
+.fondo-general{  
+    background-color: rgb(24, 24, 24);
 }
-.navbar{
-    background-color: rgb(253, 253, 253);
+.imagen{
+    height: 60px;
+    width: 200px;
 }
-.nav-link:hover{
-    color: rgb(29, 29, 28);
-    text-decoration-line: underline;
-    text-underline-offset: 6px;
+
+.navbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    width: auto;
+    height: 80px;
+    background-color: rgba(105, 103, 103, 0.1);
+    border-radius: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+.nav-list{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    padding: 3px 20px;
+    font-size: 0.75rem;
+}
+.btn-nav{
+    color: white;
+    
+}
+.btn-login{
+    background-color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 0.3rem;
+}
+.btn-nav{
+    font-size: 20px;
+    font-weight: 3rem;
+    border: none;
+    background: transparent;
+    display: none;
+    cursor: pointer;
+}
+.f1{
+    display: flex;
+    height: 70vh;
+    align-items: center;
 }
 .carta-main{
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-align: center;
+    display: flex;
+    
+}
+.card-title{
+    animation-name: slideright;
+    animation-duration: 1.5s;
 }
 .icono-carta{
     font-size: 50px;
     color: rgb(223, 236, 31);
 }
 .fondo{
-   background-image: url(../IMAGENES/diversos-empresarios-reunidos.jpg);
+   background-image: url(../IMAGENES/lasallef1.jpg );
    background-size: cover;
-   mask-image: linear-gradient(rgb(158, 155, 149) 95%, transparent);
+   mask-image: linear-gradient(rgba(0, 0, 0) 90%, transparent);
+   justify-items: center;
+   height: 100vh;
 }
-.btn-primary{
+.botones-reg{
+    display: flex;
     align-items: center;
-    color: rgb(223, 236, 31);
-    background-color: rgb(23, 23, 54);
+    justify-content: space-around;
+}
+.btn{
+    align-items: center;
+    background-color: rgb(218, 255, 6);
     border: none;
     transition: transform 0.3s ease;
     border-radius: 50px;
 }
-.btn-primary:hover{
-    color: rgb(23, 23, 54);
+.btn a{
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+}
+
+.btn:hover{
     background-color: rgb(223, 236, 31);
     transform: scale(1.1);
+    a{
+    color: rgb(23, 23, 54);
+    }
 }
+
 .seccion2{
     background-color: rgb(223, 223, 223);
+    background-image: url(../IMAGENES/6208687.jpg);
 }
 .carta{
     background-color: rgb(23, 23, 54);
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
 }
 .carta-texto{
     color: rgb(255, 255, 255);
@@ -52,6 +122,7 @@
 }
 .carta:hover{
     transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     background-color: rgb(223, 236, 31);
     .carta-texto{
         color: rgb(23, 23, 54);;
@@ -62,7 +133,7 @@
 }
 .caja{
     min-width: 250px;
-    animation: 20s scroll infinite linear;
+    animation: 20s scroll infinite ease;
     align-items: center;
 }
 .caja img{
@@ -73,6 +144,7 @@
 .scroll-container{
     overflow: hidden;
 }
+
 @keyframes scroll{
     from{
         transform: translateX(0);
@@ -80,6 +152,78 @@
     to{
         transform: translateX(-100%);
     }
+
 }
+@keyframes slideright{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-right{
+    from{
+        
+        transform: translateX(0%);
+    }
+    to{
+        
+        transform: translateX(100%);
+    }
+}
+footer{
+    background-color: rgb(23, 23, 54);;
+}
+.foot-txt{
+    color: white;
+}
+@media (max-width:1350px){
+    .navbar-content{
+        justify-content: space-between;
+        width: 80%;
+    }
+    .nav-list{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        height: 100dvh;
+        width: 50dvh;
+        top: -20%;
+        border-radius: 20px;
+        right: -130px;
+        padding: 5rem 1.5rem;
+        backdrop-filter: blur(20px);
+        z-index: 999;
+    }
+    .btn-nav{
+        display: block;
+        z-index: 1000;
+    }
+}
+.nav-list.active{
+    display: flex;
+    animation-name: slide-left;
+    animation-duration: 0.4s;
+}
+.nav-list.close{
+    display: flex;
+    animation-name: slide-right;
+    animation-duration: 0.4s;
+}
+
+
+@keyframes slide-left{
+    from{
+        transform: translateX(100%);
+    }to{
+        transform: translateX(0%);
+    }
+
+}
+    
 
  
