@@ -10,46 +10,51 @@
 
     <body class="container-fluid p-0 fondo-general">
         <!--Navegaador----------------------------------------------------------------------------->
-        <div class="container-fluid fondo p-0 pt-3">
-            <nav class="navbar-content px-5">
+        <main class="container-fluid fondo p-0 pt-3">
+            <nav class="navbar-content px-5 pt-3 mb-2">
                 <a href="">
-                    <img class="imagen" src="../IMAGENES/LSBM La Salle Business Match (4).png" alt="">
+                    <img class="imagen" src="../IMAGENES/logo.png" alt="">
                 </a>
                 <button class="btn-nav">
                     <span class="bi bi-list"></span>
                 </button>
-                <ul class="nav-list ">
-                    <li><a href="">PROGRAMA</a></li>
-                    <li><a href="">PATROCINADORES</a></li>
-                    <li><a href="">PREAPARA TU VISITA</a></li>
-                    <li><a href="">NOSOTROS</a></li>
+                <ul class="nav-list">
                     <li>
-                        <button class="btn-login"><a href="">INICIAR SESION</a></button>
+                        <button class="btn-1"><a href="">PROGRAMA</a></button>
+                    </li>
+                    <li>
+                        <button class="btn-1"><a href="">PATROCINADORES</a></button>
+                    </li>
+                    <li>
+                        <button class="btn-1"><a href="votacion.html">VOTACIÓN</a></button>
+                    </li>
+                    <li>
+                        <button class="btn-1"><a href="">NOSOTROS</a></button>
+                    </li>
+                    <li>
+                        <button class="btn-login"><a href="">INICIAR SESIÓN</a></button>
                     </li>
                 </ul>
             </nav>
             
             <!--Seccion de arriba con la descripcion---------------------------------------------------------->
-            <div class="container-fluid f1">
-                <div class="row pt-5">
-                    <div class="container-fluid col-md-12 col-lg-8 ps-5">
-                        <div class="card border-0 p-5 carta-main ">
-                            <h1 class="card-title display-3">LA SALLE BUSINESS MATCH</h1>
-                            <h3 class="justify-content-center">30 de Enero 2026</h3>
-                            <p class="card-text">Esta iniciativa impulsa la colaboración entre centros La Salle, creando sinergias globales. Refuerza la metodología NCA y promueve la innovación y co-creación en proyectos educativos. Genera oportunidades únicas de aprendizaje y desarrollo profesional para estudiantes y docentes.</p>
-                            <div class="botones-reg pt-5">
-                                <button class="btn px-5 py-3">
-                                    <a href="">EMPRESA</a>
-                                </button>
-                                <button class="btn px-5 py-3">
-                                    <a href="">VISITANTE</a>
-                                </button>
-                            </div>
+            <div class=" container-fluid row portada p-0">
+                <div class="container-fluid col-12 justify-content-center">
+                    <div class="portada-content m-5">
+                        <div class="portada-title">
+                            <h1 class="display-4 pb-3">LA SALLE BUSINESS MATCH</h1>
+                        </div>
+                        <h2 class="pb-3">30 de Enero 2026</h2>
+                        <p class="pb-3">Esta iniciativa impulsa la colaboración entre centros La Salle, creando sinergias globales. Refuerza la metodología NCA y promueve la innovación y co-creación en proyectos educativos. Genera oportunidades únicas de aprendizaje y desarrollo profesional para estudiantes y docentes.</p>
+                        <div class="container-fluid caja-botones pt-1">
+                            <button class="btn btn-2"><a href="">EMPRESA</a></button>
+                            <button class="btn btn-2"><a href="">VISITANTE</a></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+        </main>
         <!--Seccion de patrocinadores o colaboradores---------------------------------------------------->
         <section class="scroll-container justify-content-center m-0 pb-2">
             <div class="scroll-content d-flex justify-content-center">
@@ -85,90 +90,109 @@
                 </div>
             </div>
         </section>
-        <!--Seccion de tarjetas------------------------------------------------------------------------->
-        <div class="container-fluid seccion2">
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 style="text-align: center;">¿Qué quieres hacer?</h1>
+        <div class="container-fluid fondo3">
+            <div class="info container-fluid p-5 ">
+                <div class="row">
+                    <div class="col-md-12 col-lg-7">
+                        <div class="info-title">
+                            <h1 class="ps-3 mb-5">VOTA POR EL MEJOR SPOT PUBLICITARIO</h1>
+                        </div>
+                        <div class="info-text">
+                            <p>¡Es hora de votar! 🎬 Descubre los spots del concurso, disfruta de cada propuesta y elige la que más te guste. Tu voto cuenta y puede decidir quién se lleva el premio. ¡Participa y haz que gane el mejor!</p>
+                            <p>Todas las empresas participantes en el concurso han dejado el enlace a su spot en su stand. Tanto las empresas como los visitantes podrán votar por su spot favorito entre los participantes. Solo se permitirá un voto por spot.</p>
+                            <p>El periodo de votación estará abierto del <strong>28 al 30 de enero</strong>, hasta las <strong>16:00 horas</strong>.</p>
+                            <p>El spot ganador se anunciará el mismo <strong>30 de enero</strong> durante el acto de clausura de la feria y se publicará el <strong>31 de enero</strong> en la página web de <strong>LSBM</strong>.</p>
+                        </div>
+                        <div class="container-fluid d-flex justify-content-center pt-5">
+                            <button class="btn btn-votar"><a href="votacion.html"></a>VOTAR</button>
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-0 col-lg-5">
+                        <div class="container-fluid imagen-votar"></div>
+                    </div>
                 </div>
             </div>
-            <div class="row pt-5 px-5">
-                <div class="col-sm-0 col-md-0 col-lg-2">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 mb-2">
-                    <div class="card border-0 ps-4 carta">
-                        <a class="icono-carta" href=""><span class="bi bi-ticket-detailed"></span></a>
-                        <p class="card-text carta-texto">Quiero visitar el evento</p>
-                        <button class="carousel-control-next carta-texto">
-                            <span class="bi bi-arrow-right-circle-fill fs-5"></span>
-                        </button>
+            <div class="info container-fluid p-5">
+                <div class="row espejo">
+                    <div class="col-md-12 col-lg-7 ps-5">
+                        <div class="info-title">
+                            <h1 class="ps-3 mb-5">🏆GANADOR DEL SPOT PUBLICITARIO 2025🏆</h1>
+                        </div>
+                        <div class="info-text">
+                            <p><strong>Este fue el spot publicitario elegido como el mejor de una edición anterior de La Salle Business Match.</strong></p>
+                            <p>En aquella ocasión, diversas empresas participaron presentando sus spots y demostrando un gran nivel de creatividad, innovación y profesionalidad. Cada propuesta reflejó el espíritu emprendedor y el talento que caracterizan a este certamen.</p>
+                            <p>Aquí os dejamos el link de la pagina web de LSMB del año pasado :</p>
+                            <p><a href="http://lsbm.lasalle.cat:3050">LA SALLE BUSINESS MATCH 2025</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-0 col-lg-5">
+                        <div class="container-fluid video-contenedor pt-5">
+                            <h2 class="mb-4">EVENTURA</h2>
+                            <iframe class="video" width="450" height="315" src="https://www.youtube.com/embed/jORxkhINil4" frameborder="0"></iframe>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 mb-2">
-                    <div class="card border-0 ps-4 carta">
-                        <a class="icono-carta" href=""><span class="bi bi-shop-window"></span></a>
-                        <p class="card-text carta-texto">Quiero visitar el evento</p>
-                        <button class="carousel-control-next carta-texto">
-                            <span class="bi bi-arrow-right-circle-fill fs-5"></span>
-                        </button>
+            </div>
+            <div class="info container-fluid p-5 mb-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-7">
+                        <div class="info-title">
+                            <h1 class="ps-3 mb-5 pe-5">El <span class="l-n">n</span><span class="l-c">c</span><span class="l-a">a</span> en acción: la innovación educativa de La Salle</h1>
+                        </div>
+                        <div class="info-text">
+                            <p>El Nuevo Contexto de Aprendizaje (NCA) es un marco pedagógico y pastoral propio de La Salle, que impulsa una educación integral centrada en la persona.</p>
+                            <p>A través de la Feria Virtual <strong>La Salle Business Match</strong>, el NCA se hace realidad:</p>
+                            <ul>
+                                <li>💡 Promueve la co-creación y el trabajo colaborativo.</li>
+                                <li>🌍 Potencia las competencias digitales y emprendedoras.</li>
+                                <li>🤝 Fomenta la conexión entre centros La Salle a nivel global.</li>
+                                <li>🚀 Sitúa al alumno como protagonista de su propio aprendizaje.</li>
+                            </ul>
+                            <p>El Business Match es una experiencia transformadora que refleja la identidad y los valores del NCA.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 mb-2">
-                    <div class="card border-0 ps-4 carta">
-                        <a class="icono-carta" href=""><span class="bi bi-graph-up"></span></a>
-                        <p class="card-text carta-texto">Publicita tu empresa</p>
-                        <button class="carousel-control-next carta-texto">
-                            <span class="bi bi-arrow-right-circle-fill fs-5"></span>
-                        </button>
+                    <div class="container-fluid col-md-0 col-lg-5 bg-imagen-nca">
+                        <div class="container-fluid imagen-nca"></div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 mb-2">
-                    <div class="card border-0 ps-4 carta">
-                        <a class="icono-carta" href=""><span class="bi bi-ticket-detailed"></span></a>
-                        <p class="card-text carta-texto">Quiero visitar el evento</p>
-                        <button class="carousel-control-next carta-texto">
-                            <span class="bi bi-arrow-right-circle-fill fs-5"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-sm-0 col-md-0 col-lg-2">
                 </div>
             </div>
         </div>
-        <!--FOOTER--------------------------------------------------------------------------------------->
         <footer class="container-fluid">
             <div class="row">
-                <div class="col-3 foot-txt">
-                    <h3>La Salle Business Macth</h3>
+                <div class="footer-caja1 container-fluid col-sm-12 col-md-12 col-lg-4 pt-3">
+                    <h4>LA SALLE BUSINESS MATCH</h4>
+                    <p>Feria Virtual de Empresas Simuladas</p>
                 </div>
-                <div class="col-3 foot-txt">
-                    <h3>Contacto</h3>
+                <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
+                    <h5>ENLACES</h5>
+                    <h6>INICIO</h6>
+                    <h6>PATROCINADORES</h6>
+                    <h6>VOTACIÓN</h6>
+                    <h6>NOSOTROS</h6>
+                    <h6>ILUSTRACIONES</h6>
                 </div>
-                <div class="col-3 foot-txt">
-                    <h3>Redes</h3>
+                <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
+                    <h5>CONTACTO</h5>
+                    <h6><span class="bi bi-instagram"> INSTAGRAM</span></h6>
+                    <h6><span class="bi bi-facebook"> FACEBOOK</span></h6>
+                    <h6><span class="bi bi-linkedin"> LINKEDIN</span></h6>
+                    <h6>LSBM@lasalle.es</h6>
+                    <h6>C. de Tomás Anzano, 1, Casablanca, 50012 Zaragoza</h6>
+                    
+                </div>
+                <div class="row">
+                    <div class="footer-final pt-3">
+                        <p>“Aprender haciendo, crear compartiendo.”</p>
+                        <p>© 2026 La Salle Business Match</p>
+                    </div>
                 </div>
             </div>
+
         </footer>
         <!--JAVASCRIPT-------------------------------------------------------------------------------------->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            const navbarBoton = document.querySelector('.btn-nav');
-            const navbarList = document.querySelector('.nav-list');
-
-            navbarBoton.addEventListener('click', () => {
-
-                if (navbarList.classList.contains('active')){
-                    navbarList.classList.remove('active');
-                    navbarList.classList.add('close');
-                    navbarList.addEventListener('animationend', function handler(){
-                        navbarList.classList.remove('close');
-                        navbarList.removeEventListener('animationend', handler);
-                    });
-                }else{
-                    navbarList.classList.add('active');
-                }
-            });
-
-        </script>
+        <script src="../JS/main.js"></script>
+        <!--<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>-->
     </body>
 </html>

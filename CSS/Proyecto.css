@@ -1,28 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
+  
 }
 .fondo-general{  
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(17, 17, 17);
+}
+.fondo{
+   background-image: url(../IMAGENES/lasallef2.png);
+   background-size: cover;
+   mask-image: linear-gradient(rgba(0, 0, 0) 95%, transparent);
+   height: 100vh;
+   justify-items: center;
+   align-items: center;
+   overflow: hidden;
 }
 .imagen{
-    height: 60px;
-    width: 200px;
+    height: 70px;
+    width: 80px;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-left: 13px;
+    padding-right: 13px;
+    transition: 0.9s ease;
+    background-color: rgb(219, 219, 219);
+    clip-path: circle(37%);
+    margin-bottom: 15px;
 }
-
+.imagen:hover{
+    transform: scale(1.1);
+}
 .navbar-content{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     z-index: 999;
+    background-color: rgba(29, 29, 29, 0.103);
     width: auto;
     height: 80px;
-    background-color: rgba(105, 103, 103, 0.1);
     border-radius: 40px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
+
 .nav-list{
     display: flex;
     gap: 1.5rem;
@@ -31,19 +54,50 @@
 .nav-list li a{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    white-space: nowrap;
-    padding: 3px 20px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-right: 10px;
     font-size: 0.75rem;
+}
+.nav-list .btn-1 a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right,rgb(95, 95, 235), rgb(228, 228, 106));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 40px;
+    transition: 0.5s ease;
+}
+.nav-list li a:hover::after{
+    width: 92%;
+}
+.btn-1{
+    background: transparent;
+    color: white;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .btn-nav{
     color: white;
-    
 }
 .btn-login{
-    background-color: black;
-    border: none;
+    background-color: rgb(0, 0, 0);
     border-radius: 30px;
-    padding: 0.3rem;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    padding-left: 10px;
+    transition: 0.9s ease;
+}
+.btn-login:hover{
+    background-color: white;
+    transform: scale(1.1);
+    a{
+        color: black;
+    }
 }
 .btn-nav{
     font-size: 20px;
@@ -53,83 +107,90 @@
     display: none;
     cursor: pointer;
 }
-.f1{
+.portada{
     display: flex;
-    height: 70vh;
+    justify-content: center;
+    justify-items: center;
+    height: 70%;
+    width: 110vh;
     align-items: center;
 }
-.carta-main{
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
+.portada-content{
+    align-items: center; 
     text-align: center;
-    display: flex;
-    
+    color: aliceblue;   
 }
-.card-title{
+.portada-content h1{
+    font-weight: 700;
     animation-name: slideright;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 }
-.icono-carta{
-    font-size: 50px;
-    color: rgb(223, 236, 31);
-}
-.fondo{
-   background-image: url(../IMAGENES/lasallef1.jpg );
-   background-size: cover;
-   mask-image: linear-gradient(rgba(0, 0, 0) 90%, transparent);
-   justify-items: center;
-   height: 100vh;
-}
-.botones-reg{
+.caja-botones{
     display: flex;
+    flex-direction: row;
     align-items: center;
+    width: 80%;
     justify-content: space-around;
 }
 .btn{
     align-items: center;
-    background-color: rgb(218, 255, 6);
+    background-color: rgb(222, 224, 59);
     border: none;
     transition: transform 0.3s ease;
     border-radius: 50px;
 }
+.btn-2{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .btn a{
     text-decoration: none;
     color: rgb(5, 5, 5);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .btn:hover{
-    background-color: rgb(223, 236, 31);
+    background-color: rgb(222, 236, 16);
     transform: scale(1.1);
     a{
     color: rgb(23, 23, 54);
     }
 }
 
-.seccion2{
-    background-color: rgb(223, 223, 223);
-    background-image: url(../IMAGENES/6208687.jpg);
+.bolitas{
+    background-color: rgb(255, 238, 0);
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px rgb(102, 99, 60);
+    z-index: -1;
+    animation-name: particulas;
+    animation-duration: alternate;
+    animation-iteration-count: infinite;
+
 }
-.carta{
-    background-color: rgb(23, 23, 54);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    
+.inicio-bolitas{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    z-index: -1000;
 }
-.carta-texto{
-    color: rgb(255, 255, 255);
-    opacity: 1;
-}
-.carta:hover{
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background-color: rgb(223, 236, 31);
-    .carta-texto{
-        color: rgb(23, 23, 54);;
+@keyframes particulas{
+    from{
+        opacity: 0;
+        top: 0;
     }
-    .icono-carta{
-        color: rgb(23, 23, 54);;
+    to{
+        opacity: 1;
+        top: -90vh;
     }
+}
+.scroll-container{
+    overflow: hidden;
 }
 .caja{
     min-width: 250px;
@@ -141,10 +202,129 @@
     height: 60px;
     align-items: center;
 }
-.scroll-container{
-    overflow: hidden;
+.fondo3{
+    mask-image: linear-gradient(to top,rgba(0, 0, 0) 99%, transparent);
+}
+.info{
+    background-color: rgba(32, 32, 32, 0);
+    animation: aparecer 1s ease;
+    animation-timeline: view();
 }
 
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: scale(0.3);
+        transform: translateY(30%);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0%);
+    }
+}
+.info-title h1{
+    background-color: rgb(236, 236, 236);
+    font-weight: 700;
+    width: 100%;
+    border-bottom-left-radius:20px;
+    border-top-left-radius:20px;
+    clip-path: polygon(100% 0, 98% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+}
+.info-text p{    
+    color: white;
+}
+.info-text ul li {
+    color: white;
+}
+.btn-votar{
+    height: 50px;
+    width: 200px;
+    font-weight: 700;
+}
+.imagen-votar{
+    background-image: url(../IMAGENES/votar.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    clip-path: circle();
+}
+.espejo{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.video-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.video-contenedor h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+   
+}
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(122, 122, 122, 0.732);
+    border-radius: 20px;
+}
+.l-n{
+    color:rgb(79, 79, 199);
+}
+.l-c{
+    color:rgb(59, 168, 105);
+}
+.l-a{
+    color:rgb(211, 22, 32);
+}
+.bg-imagen-nca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-nca{
+    background-image: url(../IMAGENES/logoNCA800.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    border-radius: 40px;
+}
+footer{
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 207, 207);
+}
+.footer-caja1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+}
 @keyframes scroll{
     from{
         transform: translateX(0);
@@ -174,13 +354,7 @@
         transform: translateX(100%);
     }
 }
-footer{
-    background-color: rgb(23, 23, 54);;
-}
-.foot-txt{
-    color: white;
-}
-@media (max-width:1350px){
+@media (max-width:1200px){
     .navbar-content{
         justify-content: space-between;
         width: 80%;
@@ -200,9 +374,17 @@ footer{
         z-index: 999;
     }
     .btn-nav{
+        padding-bottom: 15px;
         display: block;
         z-index: 1000;
     }
+    .votacion p{
+        width: 100%;
+    }
+    
+}
+.btn-nav.active{
+    transform: translateX(120px);
 }
 .nav-list.active{
     display: flex;
@@ -214,6 +396,7 @@ footer{
     animation-name: slide-right;
     animation-duration: 0.4s;
 }
+
 
 
 @keyframes slide-left{
