@@ -24,7 +24,7 @@
         </div>
 
         <!-- Formulario de Inicio de Sesión -->
-        <div id="login" class="col-lg-4 oculto">
+        <div id="Elogin" class="col-lg-4 oculto">
             <form>
                 <label for="correo" class="form-label text-white etiquetaForm">Correo Electrónico</label>
                 <input type="text" class="form-control" id="Correo" name="correo" placeholder="Correo" required>
@@ -38,20 +38,27 @@
         </div>
 
         <!-- Formulario de Registro -->
-        <div id="registro" class="col-lg-4 oculto">
+       <div id="Eregistro" class="col-lg-4 oculto">
             <form>
-                <label for="nombre" class="form-label text-white etiquetaForm">Nombre</label>
-                <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Nombre completo" required>
+                <label for="Enombre" class="form-label text-white etiquetaForm">Nombre</label>
+                <input type="text" class="form-control" id="ENombre" name="nombre" placeholder="Nombre completo" required>
 
-                <label for="correoRegistro" class="form-label text-white etiquetaForm">Correo Electrónico</label>
-                <input type="email" class="form-control" id="CorreoRegistro" name="correoRegistro" placeholder="Correo" required>
+                <label for="EcorreoRegistro" class="form-label text-white etiquetaForm">Email</label>
+                <input type="email" class="form-control" id="ECorreoRegistro" name="correoRegistro" placeholder="Email" required>
+                
+                <label for="ETelefono" class="form-label text-white etiquetaForm">Teléfono</label>
+                <div id="telef">
+                <select class="from-select rounded me-2" name="" id="">
+                    <option value="+34" selected>🇪🇸 +34</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+39">🇮🇹 +39</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+49">🇩🇪 +49</option>
+                </select>
+                
 
-                <label for="contrasenaRegistro" class="form-label text-white etiquetaForm">Contraseña</label>
-                <input type="password" class="form-control" id="ContraseñaRegistro" name="contrasenaRegistro" placeholder="Contraseña" required>
-
-                <label for="confirmarContrasena" class="form-label text-white etiquetaForm">Confirme su Contraseña</label>
-                <input type="password" class="form-control" id="ConfirmarContrasena" name="confirmarContrasena" placeholder="Confirmar contraseña" required>
-
+                <input type="number" class="form-control" id="ETelefono" name="ETelefono" placeholder="Teléfono" pattern="[0-9]{9}" required>
+                </div>
                 <button type="submit" class="btn px-5 py-3 etiquetaForm mt-3">Registrarse</button>
                 <button type="button" class="btn mt-3" onclick="volver()">Volver</button>
             </form>
@@ -59,8 +66,8 @@
     </div>
 
     <script>
-        const FormIniciar = document.getElementById("login");
-        const FormRegistrar = document.getElementById("registro");
+        const FormIniciar = document.getElementById("Elogin");
+        const FormRegistrar = document.getElementById("Eregistro");
         const botonesPrinc = document.getElementById("botonesPrinc");
 
         document.getElementById("botonInicio").addEventListener("click", () => {
