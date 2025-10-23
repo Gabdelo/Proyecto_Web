@@ -2,157 +2,191 @@
 <html>
     <head>
         <title>PROYECTO</title>
-        <meta charset="UTF-8" name="keywords" lang="es"></meta>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="es"></meta>
+        <link rel="icon" href="../IMAGENES/logoico3.png" type="image/png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--bootstrap 5 CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"><!--bootstrap 5 icons-->
         <link type="text/css" rel ="stylesheet" href="../CSS/Proyecto.css">
     </head>
-
-    <body class="container-fluid p-0 fondo-general">
-        <!--Navegaador----------------------------------------------------------------------------->
-        <main class="container-fluid fondo p-0 pt-3">
-            <nav class="navbar-content px-5 pt-3 mb-2">
-                <a href="">
-                    <img class="imagen" src="../IMAGENES/logo.png" alt="">
-                </a>
-                <button class="btn-nav">
-                    <span class="bi bi-list"></span>
-                </button>
+    <body>
+        <nav class="container navegador bg-dark">
+            <div class="container nav-content">
+                <a href="index.html"><img class="logo" src="../IMAGENES/LOGOlsbm2.png" alt=""></a>
+                <button class="btn-nav"><span class="bi bi-list"></span></button>
                 <ul class="nav-list">
-                    <li>
-                        <button class="btn-1"><a href="">PROGRAMA</a></button>
-                    </li>
-                    <li>
-                        <button class="btn-1"><a href="">PATROCINADORES</a></button>
-                    </li>
-                    <li>
-                        <button class="btn-1"><a href="votacion.html">VOTACIÓN</a></button>
-                    </li>
-                    <li>
-                        <button class="btn-1"><a href="">NOSOTROS</a></button>
-                    </li>
-                    <li>
-                        <button class="btn-login"><a href="">INICIAR SESIÓN</a></button>
-                    </li>
+                    <li><button><a href="#PROGRAMA">PROGRAMA</a></button></li>
+                    <li><button><a href="">VOTACIÓN</a></button></li>
+                    <li><button><a href="#Patrocinadores">PATROCINADORES</a></button></li>
+                    <li><button><a href="">NOSOTROS</a></button></li>
+                    <li><button><a href="InicioSesionEmpresa.html">INICIAR SESIÓN</a></button></li>
+                    <li><button><a href="">REGISTARSE</a></button></li>
                 </ul>
-            </nav>
-            
-            <!--Seccion de arriba con la descripcion---------------------------------------------------------->
-            <div class=" container-fluid row portada p-0">
-                <div class="container-fluid col-12 justify-content-center">
-                    <div class="portada-content m-5">
-                        <div class="portada-title">
-                            <h1 class="display-4 pb-3">LA SALLE BUSINESS MATCH</h1>
-                        </div>
-                        <h2 class="pb-3">30 de Enero 2026</h2>
-                        <p class="pb-3">Esta iniciativa impulsa la colaboración entre centros La Salle, creando sinergias globales. Refuerza la metodología NCA y promueve la innovación y co-creación en proyectos educativos. Genera oportunidades únicas de aprendizaje y desarrollo profesional para estudiantes y docentes.</p>
-                        <div class="container-fluid caja-botones pt-1">
-                            <button class="btn btn-2"><a href="">EMPRESA</a></button>
-                            <button class="btn btn-2"><a href="">VISITANTE</a></button>
-                        </div>
+            </div>
+        </nav>
+        <main class="container-fluid p-0 m-0">
+            <img class="img-main" src="../IMAGENES/lasallef1.jpg" alt="">
+            <section class="container-fluid p-0 m-0">
+                <div class="container portada-content col-sm- 12 col-md-10 col-lg-6 p-0 m-0">
+                    <div class="container-fluid portada-title mb-4">
+                        <h1 class="display-4">LA SALLE BUSINESS MATCH</h1>
+                        <h3>30 de Enero 2026</h3>
+                    </div>
+                    <div class="container-fluid portada-text mb-4">
+                        <p> ¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos y descubrir nuevos talentos,  
+                            o regístrate como visitante para explorar oportunidades, aprender y conectar con líderes del sector.
+                        </p>
+                    </div>
+                    <div class="container-fluid portada-btns">
+                        <button class="btn1"><a href="">EMPPRESA</a></button>
+                        <button class="btn1"><a href="">VISITANTE</a></button>
                     </div>
                 </div>
-            </div>
-        
+            </section>
         </main>
-        <!--Seccion de patrocinadores o colaboradores---------------------------------------------------->
-        <section class="scroll-container justify-content-center m-0 pb-2">
-            <div class="scroll-content d-flex justify-content-center">
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/logodistrito.png" alt="">
+        <article class="container-fluid  m-0" id="PROGRAMA">
+            <div class="container-fluid pt-5">
+                <h1 class="titulo">PROGRAMA</h1>
+            </div>
+            <div class="container-fluid programa-content row m-0 py-5">
+                <div class="container-fluid col-5 pc">
+                    <div class="caja">
+                        <h4>ACTO INAUGURAL</h4>
+                    </div>
+                    <div class="caja"></div>
+                    <div class="caja">
+                        <h4>FERIA VIRTUAL SESIÓN MAÑANA</h4>
+                    </div>
+                    <div class="caja"></div>
+                    <div class="caja">
+                        <h4>CLAUSURA DE LA FERIA</h4>
+                    </div>
                 </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png" alt="">
+                <div class="container-fluid col-2 linea px-1">
+                    <div class="caja1 punto">
+                        <h5 class="">9:00</h5>
+                    </div>
+                    <div class="caja4 punto">
+                        <h5 class="ps-5">9:15</h5>
+                    </div>
+                    <div class="caja3 punto">
+                        <h5>10:00</h5>
+                    </div>
+                    <div class="caja4 punto">
+                        <h5 class="ps-5">15:30</h5>
+                    </div>
+                    <div class="caja5 punto">
+                        <h5>18:30</h5>
+                    </div>
                 </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/La_Salle fp_negativo.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/logo-flekick.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/BCS.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/logodistrito.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/La_Salle fp_negativo.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/logo-flekick.png" alt="">
-                </div>
-                <div class="mx-2 caja ps-5">
-                    <img src="../IMAGENES/BCS.png" alt="">
+                <div class="container-fluid col-5 pc">
+                    <div class="caja"></div>
+                    <div class="caja">
+                        <h4>CONFERENCIA: EMPRENDER CON LLUIS VALLS</h4>
+                    </div>
+                    <div class="caja"></div>
+                    <div class="caja">
+                        <h4>FERIA VIRTUAL SESIÓN TARDE</h4>
+                    </div>
+                    <div class="caja"></div>
                 </div>
             </div>
-        </section>
-        <div class="container-fluid fondo3">
-            <div class="info container-fluid p-5 ">
-                <div class="row">
-                    <div class="col-md-12 col-lg-7">
-                        <div class="info-title">
-                            <h1 class="ps-3 mb-5">VOTA POR EL MEJOR SPOT PUBLICITARIO</h1>
-                        </div>
-                        <div class="info-text">
-                            <p>¡Es hora de votar! 🎬 Descubre los spots del concurso, disfruta de cada propuesta y elige la que más te guste. Tu voto cuenta y puede decidir quién se lleva el premio. ¡Participa y haz que gane el mejor!</p>
-                            <p>Todas las empresas participantes en el concurso han dejado el enlace a su spot en su stand. Tanto las empresas como los visitantes podrán votar por su spot favorito entre los participantes. Solo se permitirá un voto por spot.</p>
-                            <p>El periodo de votación estará abierto del <strong>28 al 30 de enero</strong>, hasta las <strong>16:00 horas</strong>.</p>
-                            <p>El spot ganador se anunciará el mismo <strong>30 de enero</strong> durante el acto de clausura de la feria y se publicará el <strong>31 de enero</strong> en la página web de <strong>LSBM</strong>.</p>
-                        </div>
-                        <div class="container-fluid d-flex justify-content-center pt-5">
-                            <button class="btn btn-votar"><a href="votacion.html"></a>VOTAR</button>
-                        </div>
+        </article>
+        <div class="container-fluid s-caja m-0 caja11 mb-5">
+            <div class="container-fluid row pt-5">
+                <div class="container-fluid s-vota-content col-sm-12 col-md-6 col-lg-6 py-3">
+                    <div class="container-fluid p-0 m-0">
+                        <h1 class="mb-3">VOTACIÓN</h1>
                     </div>
-                    <div class="container-fluid col-md-0 col-lg-5">
-                        <div class="container-fluid imagen-votar"></div>
+                    <div class="caja-text"><h4>Votación del Mejor Spot Publicitario</h4></div>
+                    <div class="caja-text"><h4>Las empresas simuladas del La Salle Business Match 2026</h4></div>
+                    <div class="caja-text"><h4>presentan su talento y creatividad a través de sus spots publicitarios.</h4></div>
+                    <div class="caja-text"><h4>Descubre sus propuestas, valora su trabajo</h4></div>
+                    <div class="caja-text"><h4>y elige el spot que mejor refleje los valores e innovación de La Salle.</h4></div>
+                    <div class="caja-text"><h4>Tu voto puede marcar la diferencia.</h4></div>
+                    <div class="container-fluid d-flex justify-content-center">
+                        <button class="btn1"><a href="">VOTAR</a></button>
+                    </div>
+                </div>
+                <div class="container-fluid col-sm-0 col-md-6 col-lg-6 img-vot">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid s-caja caja22 pt-5 ">
+            <div class="container titulo2 pt-5 p-0 m-0">
+                <h1>🏆GANADOR SPORT PUBLICITARIO 2025🏆</h1>
+            </div>
+            <div class="container video-contenedor p-0 m-0 mt-3 pb-5 mb-5">
+                <h2 class="mb-4">EVENTURA</h2>
+                <div class="container-fluid v2 p-0">
+                    <span class="bi bi-play-circle-fill play"></span>
+                    <iframe class="video" controls src="https://www.youtube.com/embed/jORxkhINil4" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid s-caja s-pat p-0 m-0 pt-5" id="Patrocinadores">
+            <div class="container-fluid pt-5 p-0 m-0">
+                <h1 class="titulo">PATROCINADORES</h1>
+            </div>
+            <div class="container patrocinadores row pt-5">
+                <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta1">
+                    <div class="container-fluid log">
+                        <img src="../IMAGENES/logodistrito.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta2">
+                    <div class="container-fluid log">
+                        <img src="../IMAGENES/La_Salle fp_negativo.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta3">
+                    <div class="container-fluid log">
+                        <img src="../IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta4">
+                    <div class="container-fluid log">
+                        <img src="../IMAGENES/logo-flekick.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta5">
+                    <div class="container-fluid log">
+                        <img src="../IMAGENES/BCS.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
+                             Participa como empresa para presentar tus proyectos</p>
                     </div>
                 </div>
             </div>
-            <div class="info container-fluid p-5">
-                <div class="row espejo">
-                    <div class="col-md-12 col-lg-7 ps-5">
-                        <div class="info-title">
-                            <h1 class="ps-3 mb-5">🏆GANADOR DEL SPOT PUBLICITARIO 2025🏆</h1>
-                        </div>
-                        <div class="info-text">
-                            <p><strong>Este fue el spot publicitario elegido como el mejor de una edición anterior de La Salle Business Match.</strong></p>
-                            <p>En aquella ocasión, diversas empresas participaron presentando sus spots y demostrando un gran nivel de creatividad, innovación y profesionalidad. Cada propuesta reflejó el espíritu emprendedor y el talento que caracterizan a este certamen.</p>
-                            <p>Aquí os dejamos el link de la pagina web de LSMB del año pasado :</p>
-                            <p><a href="http://lsbm.lasalle.cat:3050">LA SALLE BUSINESS MATCH 2025</a></p>
-                        </div>
+            <div class="container-fluid info">
+                <h4>ARCHIVOS INFORMACIÓN</h4>
+                <div class="container-fluid archivos row p-0 m-0 pt-3 pb-3">
+                    <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
+                        <h5>Programa feria <br><button><span class="bi bi-download"></span></button></h5>
                     </div>
-                    <div class="col-md-0 col-lg-5">
-                        <div class="container-fluid video-contenedor pt-5">
-                            <h2 class="mb-4">EVENTURA</h2>
-                            <iframe class="video" width="450" height="315" src="https://www.youtube.com/embed/jORxkhINil4" frameborder="0"></iframe>
-                        </div>
+                    <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
+                        <h5>Bases de concursos  <br><button><span class="bi bi-download"></span></button></h5>
                     </div>
-                </div>
-            </div>
-            <div class="info container-fluid p-5 mb-5">
-                <div class="row">
-                    <div class="col-md-12 col-lg-7">
-                        <div class="info-title">
-                            <h1 class="ps-3 mb-5 pe-5">El <span class="l-n">n</span><span class="l-c">c</span><span class="l-a">a</span> en acción: la innovación educativa de La Salle</h1>
-                        </div>
-                        <div class="info-text">
-                            <p>El Nuevo Contexto de Aprendizaje (NCA) es un marco pedagógico y pastoral propio de La Salle, que impulsa una educación integral centrada en la persona.</p>
-                            <p>A través de la Feria Virtual <strong>La Salle Business Match</strong>, el NCA se hace realidad:</p>
-                            <ul>
-                                <li>💡 Promueve la co-creación y el trabajo colaborativo.</li>
-                                <li>🌍 Potencia las competencias digitales y emprendedoras.</li>
-                                <li>🤝 Fomenta la conexión entre centros La Salle a nivel global.</li>
-                                <li>🚀 Sitúa al alumno como protagonista de su propio aprendizaje.</li>
-                            </ul>
-                            <p>El Business Match es una experiencia transformadora que refleja la identidad y los valores del NCA.</p>
-                        </div>
-                    </div>
-                    <div class="container-fluid col-md-0 col-lg-5 bg-imagen-nca">
-                        <div class="container-fluid imagen-nca"></div>
+                    <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
+                        <h5>Guía para participar  <br><button><span class="bi bi-download"></span></button></h5>
                     </div>
                 </div>
             </div>
@@ -182,17 +216,14 @@
                 </div>
                 <div class="row">
                     <div class="footer-final pt-3">
-                        <p>“Aprender haciendo, crear compartiendo.”</p>
                         <p>© 2026 La Salle Business Match</p>
                     </div>
                 </div>
             </div>
-
         </footer>
-        <!--JAVASCRIPT-------------------------------------------------------------------------------------->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../JS/main.js"></script>
-        <!--<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-        <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>-->
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <!--<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>-->
 </html>

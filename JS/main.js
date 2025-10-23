@@ -1,6 +1,15 @@
 
 const navbarBoton = document.querySelector(".btn-nav");
 const navbarList = document.querySelector(".nav-list");
+const btnplay = document.querySelector(".play");
+const videoCont = document.querySelector(".v2");
+const video = document.querySelector(".video");
+
+btnplay.addEventListener("click", () =>{
+ videoCont.classList.toggle("oculto");
+ btnplay.classList.toggle("oculto");
+ video.src += "?autoplay=1";
+});
 
 navbarBoton.addEventListener("click", () => {
     navbarBoton.classList.toggle("active");
@@ -16,17 +25,21 @@ navbarBoton.addEventListener("click", () => {
   }
 });
 
+const navbar = document.querySelector('.nav-content');
+    let timeout;
 
-const contenedor = document.querySelector(".inicio-bolitas");
-const cantidad = 40;
-for (let i = 0; i < cantidad; i++) {
-  const bola = document.createElement("span");
-  bola.classList.add("bolitas");
-  contenedor.appendChild(bola);
-}
-const bolitas = document.querySelectorAll(".bolitas");
+    function mostrarNavbar() {
+      navbar.classList.remove('hidden');
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        navbar.classList.add('hidden');
+      }, 2000); // 3 segundos sin interacción
+    }
 
-bolitas.forEach((bola) => {
-  const duracion = (Math.random() * 10 + 10).toFixed(2);
-  bola.style.animationDuration = `${duracion}s`;
-});
+    // Detectar interacción
+    //window.addEventListener('mousemove', mostrarNavbar);
+    //window.addEventListener('scroll', mostrarNavbar);
+    //window.addEventListener('keydown', mostrarNavbar);
+
+    // Iniciar temporizador al cargar
+    //mostrarNavbar();
