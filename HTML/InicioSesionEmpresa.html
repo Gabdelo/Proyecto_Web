@@ -10,58 +10,64 @@
 </head>
 
 <body class="container-fluid p-0 fondo-general">
+
+    <video autoplay loop muted id="video_background">
+    <source src="../IMAGENES\0_Landscape_Mountains_1280x720.mp4" type="video/mp4">
+  </video>
     <div class="container-fluid fondo p-0 pt-3">
-        <nav class="navbar-content px-5">
-            <a href="">
-                <img class="imagen" src="../IMAGENES/LSBM La Salle Business Match (4).png" alt="">
-            </a>
-        </nav>
+        <div id="blur">
+            <nav class="navbar-content px-5">
+                <a href="">
+                    <img class="imagen" src="../IMAGENES/logo.png" alt="">
+                </a>
+            </nav>
 
-        <!-- Botones principales -->
-        <div class="pt-5 botones-reg" id="botonesPrinc">
-            <button class="btn px-5 py-3" id="botonInicio">Iniciar Sesión</button>
-            <button class="btn px-5 py-3" id="botonRegistro">Registrarse</button>
-        </div>
+            <!-- Botones principales -->
+            <div class="pt-5 botones-reg" id="botonesPrinc">
+                <button class="btn px-5 py-3" id="botonInicio">Iniciar Sesión</button>
+                <button class="btn px-5 py-3" id="botonRegistro">Registrarse</button>
+            </div>
 
-        <!-- Formulario de Inicio de Sesión -->
-        <div id="Elogin" class="col-lg-4 oculto">
-            <form>
-                <label for="correo" class="form-label text-white etiquetaForm">Correo Electrónico</label>
-                <input type="text" class="form-control" id="Correo" name="correo" placeholder="Correo" required>
+            <!-- Formulario de Inicio de Sesión -->
+            <div id="Elogin" class="col-lg-4 oculto">
+                <form>
+                    <label for="correo" class="form-label text-white etiquetaForm">Correo Electrónico</label>
+                    <input type="text" class="form-control" id="Correo" name="correo" placeholder="Correo" required>
 
-                <label for="contrasena" class="form-label text-white etiquetaForm">Contraseña</label>
-                <input type="password" class="form-control" id="Contraseña" name="contrasena" placeholder="Contraseña" required>
+                    <label for="contrasena" class="form-label text-white etiquetaForm">Contraseña</label>
+                    <input type="password" class="form-control" id="Contraseña" name="contrasena" placeholder="Contraseña" required>
 
-                <button type="submit" class="btn px-5 py-3 etiquetaForm mt-3">Iniciar Sesión</button>
-                <button type="button" class="btn mt-3" onclick="volver()">Volver</button>
-            </form>
-        </div>
+                    <button type="submit" class="btn px-5 py-3 etiquetaForm mt-3">Iniciar Sesión</button>
+                    <button type="button" class="btn etiquetaForm mt-3" onclick="volver()">Volver</button>
+                </form>
+            </div>
 
-        <!-- Formulario de Registro -->
-       <div id="Eregistro" class="col-lg-4 oculto">
-            <form>
-                <label for="Enombre" class="form-label text-white etiquetaForm">Nombre</label>
-                <input type="text" class="form-control" id="ENombre" name="nombre" placeholder="Nombre completo" required>
+            <!-- Formulario de Registro -->
+        <div id="Eregistro" class="col-lg-4 oculto">
+                <form>
+                    <label for="Enombre" class="form-label text-white etiquetaForm">Nombre</label>
+                    <input type="text" class="form-control" id="ENombre" name="nombre" placeholder="Nombre completo" required>
 
-                <label for="EcorreoRegistro" class="form-label text-white etiquetaForm">Email</label>
-                <input type="email" class="form-control" id="ECorreoRegistro" name="correoRegistro" placeholder="Email" required>
-                
-                <label for="ETelefono" class="form-label text-white etiquetaForm">Teléfono</label>
-                <div id="telef">
-                <select class="from-select rounded me-2" name="" id="">
-                    <option value="+34" selected>🇪🇸 +34</option>
-                    <option value="+33">🇫🇷 +33</option>
-                    <option value="+39">🇮🇹 +39</option>
-                    <option value="+44">🇬🇧 +44</option>
-                    <option value="+49">🇩🇪 +49</option>
-                </select>
-                
+                    <label for="EcorreoRegistro" class="form-label text-white etiquetaForm">Email</label>
+                    <input type="email" class="form-control" id="ECorreoRegistro" name="correoRegistro" placeholder="Email" required>
+                    
+                    <label for="ETelefono" class="form-label text-white etiquetaForm">Teléfono</label>
+                    <div id="telef">
+                    <select class="from-select rounded me-2" name="" id="">
+                        <option value="+34" selected>🇪🇸 +34</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+39">🇮🇹 +39</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+49">🇩🇪 +49</option>
+                    </select>
+                    
 
-                <input type="number" class="form-control" id="ETelefono" name="ETelefono" placeholder="Teléfono" pattern="[0-9]{9}" required>
-                </div>
-                <button type="submit" class="btn px-5 py-3 etiquetaForm mt-3">Registrarse</button>
-                <button type="button" class="btn mt-3" onclick="volver()">Volver</button>
-            </form>
+                    <input type="number" class="form-control" id="ETelefono" name="ETelefono" placeholder="Teléfono" pattern="[0-9]{9}" required>
+                    </div>
+                    <button type="submit" class="btn px-5 py-3 etiquetaForm mt-3">Registrarse</button>
+                    <button type="button" class="btn mt-3" onclick="volver()">Volver</button>
+                </form>
+            </div>
         </div>
     </div>
 
