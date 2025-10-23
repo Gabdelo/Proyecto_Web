@@ -6,18 +6,39 @@
 }
 .fondo-general{  
     background-color: rgb(24, 24, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .imagen{
-    height: 60px;
+    margin-top: 50px;
+    height: 130px;
     width: 200px;
 }
 
+#video_background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; /* Asegura que el video ocupe todo el ancho */
+  min-height: 100%; /* Asegura que el video ocupe toda la altura */
+  z-index: -1; /* Envía el video al fondo */
+}
+
 .fondo{
-   background-image: url(../IMAGENES/lasallef1.jpg );
-   background-size: cover;
-   mask-image: linear-gradient(rgba(0, 0, 0) 90%, transparent);
    justify-items: center;
-   height: 100vh;
+   height: 100vh;   
+}
+#blur{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 80%;
+    background-color:;
+    backdrop-filter: blur(10px);
 }
 .btn{
     align-items: center;
@@ -38,9 +59,8 @@
     align-items: center;
     justify-content: space-around;
 }
-
-.botones-reg button{
-    margin-top: 40px;
+#botonRegistro{
+    margin-top:40px
 }
 .btn:hover{
     background-color: rgb(223, 236, 31);
@@ -51,8 +71,11 @@
 }
 
 form{
-    margin-top: 7rem;
+    margin-top: 2rem;
+
+    
 }
+
 .etiquetaForm{
     margin-top: 10px;
 } 
