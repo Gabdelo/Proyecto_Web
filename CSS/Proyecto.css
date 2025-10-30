@@ -370,7 +370,7 @@ article h5{
 }
 .img-vot{
     opacity: 0;
-    background-image: url(/IMAGENES/logo-NCA-cas-1024x671.png);
+    background-image: url(../IMAGENES/logo-NCA-cas-1024x671.png);
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
@@ -396,7 +396,7 @@ article h5{
     animation-range: 30% 100%;
 }
 .caja22{
-    background-image: url(/IMAGENES/lineabg.png);
+    background-image: url(../IMAGENES/lineabg.png);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -539,7 +539,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(/IMAGENES/logodistrito.png);
+    background-image: url(../IMAGENES/logodistrito.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -554,7 +554,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(/IMAGENES/La_Salle\ fp_negativo.png);
+    background-image: url(../IMAGENES/La_Salle\ fp_negativo.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -569,7 +569,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(/IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png);
+    background-image: url(../IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -585,7 +585,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(/IMAGENES/logo-flekick.png);
+    background-image: url(../IMAGENES/logo-flekick.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -600,7 +600,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(/IMAGENES/BCS.png);
+    background-image: url(../IMAGENES/BCS.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -791,7 +791,7 @@ footer{
     display: none;
    }
    main{
-    background-image: url(/IMAGENES/bg-movil.jpg);
+    background-image: url(../IMAGENES/bg-movil.jpg);
     background-size: 120%;
    }
    .img-main{

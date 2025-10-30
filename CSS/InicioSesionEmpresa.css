@@ -41,7 +41,7 @@ nav{
     height: 15%;
 }
 .logo{
-    background-image: url(/IMAGENES/logo.png);
+    background-image: url(../IMAGENES/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     scale: 2.5;
