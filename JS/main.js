@@ -25,21 +25,26 @@ navbarBoton.addEventListener("click", () => {
   }
 });
 
-const navbar = document.querySelector('.nav-content');
-    let timeout;
 
-    function mostrarNavbar() {
-      navbar.classList.remove('hidden');
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        navbar.classList.add('hidden');
-      }, 2000); // 3 segundos sin interacción
-    }
+const contenedor = document.querySelector(".inicio-bolitas");
+const cantidad = 40;
 
-    // Detectar interacción
-    //window.addEventListener('mousemove', mostrarNavbar);
-    //window.addEventListener('scroll', mostrarNavbar);
-    //window.addEventListener('keydown', mostrarNavbar);
+for (let i = 0; i < cantidad; i++) {
+  const bola = document.createElement("span");
+  bola.classList.add("bolita");
+  contenedor.appendChild(bola);
+}
 
-    // Iniciar temporizador al cargar
-    //mostrarNavbar();
+const bolitas = document.querySelectorAll(".bolita"); 
+
+bolitas.forEach((bola) => {
+  const duracion = (Math.random() * 15 + 10).toFixed(2); 
+  bola.style.animationDuration = `${duracion}s`;
+
+  const delay = (Math.random() * 2).toFixed(2);
+  bola.style.animationDelay = `${delay}s`;
+});
+    
+
+      
+ 
