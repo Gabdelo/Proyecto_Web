@@ -66,7 +66,11 @@
                             </select>
                             <input type="number" class="form-control" id="ETelefono" name="ETelefono" placeholder="Teléfono" pattern="[0-9]{9}" required>
                         </div>
-                        <button type="submit" class="btn mt-3">Registrarse</button>
+                        <div id="EmpresaInputs">
+                            <label for="Empresa" class="form-label text-white " ></label>
+                            <input type="Empresa" class="form-control" id="EEmpresa" name="Empresa" placeholder="Empresa" required>
+                        </div>
+                        <button type="submit" class="btn mt-2">Registrarse</button>
                     </form>
                 </div>
                  
@@ -79,6 +83,9 @@
      const FormIniciar = document.getElementById("Elogin");
         const FormRegistrar = document.getElementById("Eregistro");
         const botonesPrinc = document.getElementById("botonesPrinc");
+        const params = new URLSearchParams(window.location.search);
+    const tipo = params.get("tipo");
+    const InptusEmpresa = document.getElementById("EmpresaInputs");
         
 
         document.getElementById("botonInicio").addEventListener("click", () => {
@@ -98,6 +105,15 @@
             FormIniciar.classList.add("oculto");
             FormRegistrar.classList.add("oculto");
             botonesPrinc.classList.remove("oculto");
+        }
+        if(tipo == "visitante") {
+            InptusEmpresa.classList.add("oculto");
+        } 
+
+        if(tipo == "inicioGeneral"){
+            botonesPrinc.classList.add("oculto");
+            FormIniciar.classList.remove("oculto");
+            FormIniciar.classList.add("animacion");
         }
 </script>
 </html>

@@ -45,6 +45,16 @@ bolitas.forEach((bola) => {
   bola.style.animationDelay = `${delay}s`;
 });
     
+document.getElementById("BotonEmpresa").addEventListener("click", function(){
+  window.location.href ="InicioSesionEmpresa.html?tipo=empresa";
+});
 
+document.getElementById("BotonVisitante").addEventListener("click", function(){
+  window.location.href ="InicioSesionEmpresa.html?tipo=visitante";
+});
+
+document.getElementById("iniciar").addEventListener("click", function(){
+  window.location.href= "InicioSesionEmpresa.html?tipo=inicioGeneral";
+});
       
  
