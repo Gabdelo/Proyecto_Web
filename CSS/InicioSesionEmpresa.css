@@ -106,7 +106,7 @@ form{
 }
 .formu{
     width: 60%;
-    height: 60%;
+    height: 70%;
 }
 .form-control {
   background-color: transparent !important; 
@@ -160,6 +160,8 @@ label{
    }
    .formu{
     width: 80%;
+    height: 80%;
+       
 }
    
 }
