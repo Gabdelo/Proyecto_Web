@@ -8,50 +8,6 @@
 body, html{
     height: 100%;
     width: 100%;
-    height: 100vh;
-}
-body{
-    background-color: rgb(233, 233, 233);
-}
-.perfil-main{
-    min-height: 90vh;
-    width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-}
-
-.columna{
-    background-color: rgb(224, 228, 96);
-}
-.caja{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(219, 234, 89);
-    border-radius: 20px;
-    padding: 2rem;
-    width: 40%;
-    height: 80%;
-    place-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.301);
-}
-.caja p{
-    font-size: clamp(0.7rem, 1.1vw, 3rem);
-}
-.formulario{
-    width: 90%;
-}
-.caja-btns{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.btn{
-    width: auto;
-    font-size: clamp(0.7rem, 1.1vw, 3rem);
-    background-color: #044cab;
-    color: yellow;
-    border: none;
 }
 .logo{
     height: 70px;
@@ -119,6 +75,47 @@ body{
 }
 .nav-list li a:hover::after{
     width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 91%;
+}
+.equipo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.miembro{
+    width: 25%;
+    transition: 0.9s ease;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.577);
+    background-color: #044cab;
+}
+.miembro h4{
+    color: aliceblue;
+}
+.miembro h6{
+    color: #f8ac04;
+}
+.miembro p{
+    color: aliceblue;
+}
+.miembro:hover{
+    transform: scale(1.1);
 }
 
 @media (max-width:1200px){
