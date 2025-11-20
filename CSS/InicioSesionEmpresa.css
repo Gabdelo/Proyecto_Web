@@ -102,11 +102,22 @@ nav{
 form{
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
 }
 .formu{
     width: 60%;
-    height: 60%;
+    height: 70%;
+}
+.aviso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+}
+.aviso p{
+    height: 2rem;
 }
 .form-control {
   background-color: transparent !important; 
@@ -160,6 +171,8 @@ label{
    }
    .formu{
     width: 80%;
+    height: 80%;
+       
 }
    
 }

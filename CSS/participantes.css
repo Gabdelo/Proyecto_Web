@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body, html{
+
+body,html{
     height: 100%;
     width: 100%;
 }
@@ -76,47 +78,78 @@ body, html{
 .nav-list li a:hover::after{
     width: 100%;
 }
-main{
+.cajaParticipante {
+    border: 2px solid cadetblue;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
-.text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 91%;
-}
-.equipo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.miembro{
+    justify-content: flex-start;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
     transition: 0.9s ease;
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.577);
-    background-color: #044cab;
-}
-.miembro h4{
-    color: aliceblue;
-}
-.miembro h6{
-    color: #f8ac04;
-}
-.miembro p{
-    color: aliceblue;
-}
-.miembro:hover{
-    transform: scale(1.015);
 }
 
+.cajaParticipante:hover {
+    transform: scale(1.05);
+}
+.cajaParticipante a{
+    text-decoration: none;
+    color: black;
+}
+.cajaParticipante a img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+}
+.cajaParticipante .nombre {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.cajaParticipante .desc {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding: 0 5px;
+    overflow-wrap: break-word;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+     
+}
+
+@media (max-width: 480px) {
+    .cajaParticipante {
+        width: 90%;
+    }
+
+    .cajaParticipante img {
+        max-height: 120px;
+    }
+
+    .cajaParticipante .desc {
+        font-size: 0.85rem;
+    }
+}
 @media (max-width:1200px){
    .nav-list{
     display: none;
