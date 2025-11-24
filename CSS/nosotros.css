@@ -9,6 +9,7 @@ body, html{
     height: 100%;
     width: 100%;
 }
+
 .logo{
     height: 70px;
     background-color: rgb(255, 255, 255);
@@ -37,6 +38,7 @@ body, html{
     top: 2%;
     z-index: 999;
     padding-right: 2rem;
+    
 }
 .nav-content.hidden{
     opacity: 0;
@@ -115,6 +117,33 @@ main{
 }
 .miembro:hover{
     transform: scale(1.015);
+}
+footer{
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 207, 207);
+}
+.footer-caja1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-caja h6 a{
+    text-decoration: none;
+    color: black;
+}
+.footer-final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
 }
 
 @media (max-width:1200px){

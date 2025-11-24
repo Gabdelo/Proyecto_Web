@@ -156,6 +156,7 @@ section{
     border-radius: 40px;
     border: none;
     transition: ease 0.9s;
+    font-weight: 600;
 }
 .btn1 a{
     text-decoration: none;
