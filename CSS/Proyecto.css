@@ -555,7 +555,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(../IMAGENES/La_Salle\ fp_negativo.png);
+    background-image: url(../IMAGENES/lasallesantoangel.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -570,7 +570,7 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(../IMAGENES/La_Salle_fp_online_horitzontal_negatiu.png);
+    background-image: url(../IMAGENES/lasalleirun.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -640,6 +640,10 @@ footer{
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+.info a{
+    color: aliceblue;
+    text-decoration: none;
 }
 .archivos{
     display: flex;

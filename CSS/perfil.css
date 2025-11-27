@@ -49,8 +49,7 @@ body{
 .btn{
     width: auto;
     font-size: clamp(0.7rem, 1.1vw, 3rem);
-    background-color: #044cab;
-    color: yellow;
+    
     border: none;
 }
 .logo{
