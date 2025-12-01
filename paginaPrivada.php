@@ -20,14 +20,22 @@
         ?>
      <nav class="container navegador bg-dark">
          <div class="container nav-content">
-             <a href="index.html"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
+             <a href="index.php"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
              <button class="btn-nav"><span class="bi bi-list"></span></button>
              <ul class="nav-list">
-                 <li><button><a href="#PROGRAMA">PROGRAMA</a></button></li>
-                 <li><button><a href="participantes.html">VOTACIÓN</a></button></li>
-                 <li><button><a href="#Patrocinadores">PATROCINADORES</a></button></li>
-                 <li><button><a href="nosotros.html">NOSOTROS</a></button></li>
-                 <li><button><a href="InicioSesionEmpresa.html" id="iniciar">INICIAR SESIÓN</a></button></li>
+                 <li><button><a href="index.php#PROGRAMA">PROGRAMA</a></button></li>
+                 <li><button><a href="participantes.php">VOTACIÓN</a></button></li>
+                 <li><button><a href="index.php#Patrocinadores">PATROCINADORES</a></button></li>
+                 <li><button><a href="nosotros.php">NOSOTROS</a></button></li>
+                 <li><button>
+                        <?php
+                        if(!isset($nombre)){
+                            echo '<a href="InicioSesionEmpresa.html" id="iniciar">Iniciar Sesión</a>';
+                        }else{
+                            echo '<a href="paginaPrivada.php">'.$nombre.'</a>';
+                        }
+                        ?>
+                </button></li>
              </ul>
          </div>
      </nav>

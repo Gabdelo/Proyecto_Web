@@ -1,3 +1,12 @@
+<?php
+        session_start();
+        if (isset($_SESSION['idUsuario'])) {
+            
+        $idUsuario = $_SESSION['idUsuario'];
+        $nombre = $_SESSION['nombre'];
+            
+        }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,14 +20,26 @@
     <body class="pt-3">
         <nav class="container navegador">
             <div class="container nav-content">
-                <a href="index.html"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
+                <a href="index.php"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
                 <button class="btn-nav"><span class="bi bi-list"></span></button>
                 <ul class="nav-list">
-                    <li><button><a href="index.html#PROGRAMA">PROGRAMA</a></button></li>
-                    <li><button><a href="participantes.html">VOTACIÓN</a></button></li>
-                    <li><button><a href="index.html#Patrocinadores">PATROCINADORES</a></button></li>
-                    <li><button><a href="nosotros.html">NOSOTROS</a></button></li>
-                    <li><button><a href="InicioSesionEmpresa.html" id="iniciar">INICIAR SESIÓN</a></button></li>
+                    <li><button><a href="index.php#PROGRAMA">PROGRAMA</a></button></li>
+                    <li><button><a href="participantes.php">VOTACIÓN</a></button></li>
+                    <li><button><a href="index.php#Patrocinadores">PATROCINADORES</a></button></li>
+                    <li><button><a href="nosotros.php">NOSOTROS</a></button></li>
+                    <li><button>
+                        <?php
+                        if(!isset($nombre)){
+                            echo '<a href="InicioSesionEmpresa.html" id="iniciar">Iniciar Sesión</a>';
+                        }elseif($_SESSION['tipo']=='empresa'){
+                            echo '<a href="paginaPrivada.php">'.$nombre.'</a>';
+                        }elseif($_SESSION['tipo']=='visitante'){
+                            echo '<a href="perfil.php">'.$nombre.'</a>';
+                        }elseif ($_SESSION['tipo'] == 'administrador') {
+                            echo '<a href="admin.php">'.$nombre.'</a>';
+                        }
+                        ?>
+                    </button></li>
                 </ul>
             </div>
         </nav>
@@ -67,26 +88,26 @@
                 
                 <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
                     <h4 class="card-title mb-2">Lucía Hernandez</h4>
-                    <h6>Diseñador Frontend</h6>
+                    <h6>Coordinadora de Proyecto</h6>
                     <p class="card-text">
-                        Responsable del diseño visual y la experiencia del usuario. 
-                        Se ocupa de que la interfaz sea intuitiva, atractiva y responsive en todos los dispositivos.
+                        Encargada de supervisar todo el proceso de desarrollo de la página. Nos proporcionó la información clave,
+                         validó cada apartado y se aseguró de que la estructura general siguiera los objetivos marcados para el proyecto.
                     </p>
                 </div>
                 <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
                     <h4 class="card-title mb-2">Andoni</h4>
-                    <h6>Desarrollador Backend</h6>
+                    <h6>Responsable de Contenidos</h6>
                     <p class="card-text">
-                        Encargado de la lógica del servidor, gestión de usuarios y conexión con la base de datos. 
-                        Implementa las funcionalidades principales de la feria virtual y la seguridad del sistema.
+                        Definió qué información debía aparecer en la web y cómo organizarla. Nos guió en la creación de los textos y en la 
+                        distribución del contenido para garantizar que todo fuese claro, útil y coherente con la idea original.
                     </p>
                 </div>
                 <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
                     <h4 class="card-title mb-2">Maialen</h4>
-                    <h6>Administrador de Bases de Datos</h6>
+                    <h6>Consultora UX</h6>
                     <p class="card-text">
-                        Diseña y mantiene la estructura de la base de datos del proyecto. 
-                        Se asegura de la integridad, eficiencia y correcto almacenamiento de la información de los expositores y visitantes.
+                        Revisó la usabilidad y la experiencia de navegación. Nos dio indicaciones para mejorar la estructura, 
+                        facilitar la navegación entre secciones y hacer que la página resultara intuitiva para cualquier usuario.
                     </p>
                 </div>
             </div>

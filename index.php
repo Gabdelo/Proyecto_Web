@@ -1,3 +1,13 @@
+<?php
+        session_start();
+        if (isset($_SESSION['idUsuario'])) {
+            
+        $idUsuario = $_SESSION['idUsuario'];
+        $nombre = $_SESSION['nombre'];
+        }
+        
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,14 +21,26 @@
     <body>
         <nav class="container navegador bg-dark">
             <div class="container nav-content">
-                <a href="index.html"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
+                <a href="index.php"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
                 <button class="btn-nav"><span class="bi bi-list"></span></button>
                 <ul class="nav-list">
-                    <li><button><a href="#PROGRAMA">PROGRAMA</a></button></li>
-                    <li><button><a href="participantes.html">VOTACIÓN</a></button></li>
-                    <li><button><a href="#Patrocinadores">PATROCINADORES</a></button></li>
-                    <li><button><a href="nosotros.html">NOSOTROS</a></button></li>
-                    <li><button><a href="InicioSesionEmpresa.html" id="iniciar">INICIAR SESIÓN</a></button></li>
+                    <li><button><a href="index.php#PROGRAMA">PROGRAMA</a></button></li>
+                    <li><button><a href="participantes.php">VOTACIÓN</a></button></li>
+                    <li><button><a href="index.php#Patrocinadores">PATROCINADORES</a></button></li>
+                    <li><button><a href="nosotros.php">NOSOTROS</a></button></li>
+                    <li><button>
+                        <?php
+                        if(!isset($nombre)){
+                            echo '<a href="InicioSesionEmpresa.html" id="iniciar">Iniciar Sesión</a>';
+                        }elseif($_SESSION['tipo']=='empresa'){
+                            echo '<a href="paginaPrivada.php">'.$nombre.'</a>';
+                        }elseif($_SESSION['tipo']=='visitante'){
+                            echo '<a href="perfil.php">'.$nombre.'</a>';
+                        }elseif ($_SESSION['tipo'] == 'administrador') {
+                            echo '<a href="admin.php">'.$nombre.'</a>';
+                        }
+                        ?>
+                    </button></li>
                 </ul>
             </div>
         </nav>
@@ -131,14 +153,14 @@
             <div class="container-fluid pt-5 p-0 m-0">
                 <h1 class="titulo">PATROCINADORES</h1>
             </div>
-            <div class="container patrocinadores row pt-5">
+            <div class="container-fluid patrocinadores row pt-5">
                 <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta1">
                     <div class="container-fluid log">
                         <img src="./IMAGENES/logodistrito.png" alt="">
                     </div>
                     <div class="pat-text">
-                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
-                             Participa como empresa para presentar tus proyectos</p>
+                        <p>Distrito educativo que coordina los centros La Salle de España y Portugal, impulsando proyectos comunes, formación 
+                            y acompañamiento a escuelas y comunidades lasalianas.</p>
                     </div>
                 </div>
                 <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta2">
@@ -146,8 +168,8 @@
                         <img src="./IMAGENES/lasallesantoangel.png" alt="">
                     </div>
                     <div class="pat-text">
-                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
-                             Participa como empresa para presentar tus proyectos</p>
+                        <p>Centro educativo ubicado en Zaragoza perteneciente a La Salle que ofrece programas formativos orientados al crecimiento académico, 
+                            personal y social del alumnado, integrándose en la red de escuelas lasalianas.</p>
                     </div>
                 </div>
                 <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta3">
@@ -155,8 +177,8 @@
                         <img src="./IMAGENES/lasalleirun.png" alt="">
                     </div>
                     <div class="pat-text">
-                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
-                             Participa como empresa para presentar tus proyectos</p>
+                        <p>Colegio concertado en Irun (Gipuzkoa) perteneciente a La Salle, que ofrece educación desde infantil hasta formación 
+                            profesional con un modelo pedagógico innovador.</p>
                     </div>
                 </div>
                 <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta4">
@@ -164,8 +186,8 @@
                         <img src="./IMAGENES/logo-flekick.png" alt="">
                     </div>
                     <div class="pat-text">
-                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
-                             Participa como empresa para presentar tus proyectos</p>
+                        <p>Marca especializada en equipamiento deportivo, conocida por sus espinilleras personalizables diseñadas para ofrecer comodidad,
+                             protección y estilo a deportistas.</p>
                     </div>
                 </div>
                 <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta5">
@@ -173,8 +195,8 @@
                         <img src="./IMAGENES/BCS.png" alt="">
                     </div>
                     <div class="pat-text">
-                        <p>¡Bienvenidos a la feria virtual que conecta empresas y talento joven!  
-                             Participa como empresa para presentar tus proyectos</p>
+                        <p>Congregación religiosa internacional que sustenta la misión educativa de La Salle en el mundo, promoviendo valores de fraternidad,
+                             servicio y educación integral.</p>
                     </div>
                 </div>
             </div>
@@ -182,13 +204,13 @@
                 <h4>ARCHIVOS INFORMACIÓN</h4>
                 <div class="container-fluid archivos row p-0 m-0 pt-3 pb-3">
                     <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                        <h5>Programa feria <br><button><span class="bi bi-download"></span></button></h5>
+                         <h5>Programa feria<br><a href="./Archivos/Programa_LSBM_2025.pdf" download><button><span class="bi bi-download"></span></button></a></h5>
                     </div>
                     <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                        <h5><a href="./Archivos/" download="Bases del Concurso de Spot Publicitario LSBM 2026.pdf">Bases de concursos </a> <br><button><span class="bi bi-download"></span></button></h5>
+                        <h5>Bases Concurso<br><a href="./Archivos/BasesConcurso.pdf" download><button><span class="bi bi-download"></span></button></a></h5>
                     </div>
                     <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                        <h5>Guía para participar  <br><button><span class="bi bi-download"></span></button></h5>
+                         <h5>Guian para participar<br><a href="./Archivos/LSBM 2025 Guia Feria .pdf" download><button><span class="bi bi-download"></span></button></a></h5>
                     </div>
                 </div>
             </div>

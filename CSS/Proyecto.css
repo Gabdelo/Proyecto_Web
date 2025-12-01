@@ -530,6 +530,7 @@ footer{
     margin-left: 1px;
     margin-right: 1px;
     box-shadow: 0 0 40px rgba(122, 122, 122, 0.732);
+    height: 25rem;
 }
 .carta1::after{
     content: "";
@@ -625,11 +626,11 @@ footer{
     color: aliceblue;
 }
 .pat-text p{
-    font-size: clamp(0.7rem, 1.1vw, 3rem);
+    font-size: clamp(0.7rem, 0.8vw, 1rem);
 }
 .carta:hover{
     transform: scale(1.1);
-    width: 16rem;
+    width: 20rem;
     z-index: 10;
     .pat-text{
         opacity: 1;
@@ -801,6 +802,9 @@ footer{
    }
    .img-main{
     display: none;
+   }
+   .carta{
+    height: 13rem;
    }
 }
 @media (max-width:500px){

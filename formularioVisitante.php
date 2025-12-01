@@ -22,7 +22,7 @@
 
         <div id="Eregistro" class="formu mb-5">
 
-            <form method="post" action="tratarRegistro.php">
+            <form method="post" action="RegistroV.php">
 
                 <button type="button" class="atras" onclick="volver()">
                     <span class="bi bi-arrow-left"></span>
@@ -39,7 +39,7 @@
                 <div>
                     <label for="corre" class="form-label text-white"></label>
                     <input type="correo" class="form-control" id="ECorreoRegistro" name="correoRegistro"
-                        placeholder="Email" required>
+                        placeholder="Email" required pattern="[A-Za-z]{0,45}[@]{1}[A-Za-z]{1,15}[.]{1}[A-Za-z]{1,5}">
                 </div>
 
                 <!-- Nivel estudios -->
@@ -103,13 +103,13 @@
 
                 <!-- Experiencia -->
                 <div class="mt-3">
-                    <input type="number" class="form-control" name="experiencia"
+                    <input type="number" class="form-control" name="Cexperiencia"
                         placeholder="Años de experiencia (0 si no tiene)" min="0" required>
                 </div>
 
                 <!-- Teléfono -->
                 <div id="telef" class="mt-3 d-flex">
-                    <select class="from-select rounded me-2" name="prefijo">
+                    <select class="from-select rounded me-2" name="Cprefijo">
                         <option value="+34" selected>🇪🇸 +34</option>
                         <option value="+33">🇫🇷 +33</option>
                         <option value="+39">🇮🇹 +39</option>
@@ -117,16 +117,25 @@
                         <option value="+49">🇩🇪 +49</option>
                     </select>
 
-                    <input type="number" class="form-control" id="ETelefono" name="ETelefono"
+                    <input type="number" class="form-control" id="CTelefono" name="ETelefono"
                         placeholder="Teléfono" pattern="[0-9]{9}" required>
                 </div>
 
-                <!-- Empresa -->
+                <!-- Provincia -->
                 <div id="EmpresaInputs" class="mt-3">
                     <label for="Provinicia" class="form-label text-white"></label>
-                    <input type="text" class="form-control" id="EProvincia" name="Provincia" placeholder="Provincia"
+                    <input type="text" class="form-control" id="CProvincia" name="Provincia" placeholder="Provincia"
                         required>
                 </div>
+
+                <!-- Contraseña -->
+                <div id="EmpresaInputs" class="mt-3">
+                    <label for="contra" class="form-label text-white"></label>
+                    <input type="password" class="form-control" id="CContra" name="Contra" placeholder="Contraseña"
+                        required>
+                </div>
+
+
 
                 <!-- Consentimiento -->
                 <div class="mt-3 text-white">
@@ -136,6 +145,12 @@
 
                 <!-- Botón enviar -->
                 <button type="submit" class="btn mt-2">Registrarse</button>
+
+                <?php
+               if (isset($_GET['error']) && $_GET['error'] == 1) {
+               echo '<div class="alert alert-danger text-center">Debe rellenar todos los campos obligatorios.</div>';
+                }
+                ?>
 
             </form>
 

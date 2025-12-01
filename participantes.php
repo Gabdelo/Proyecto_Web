@@ -1,3 +1,12 @@
+<?php
+        session_start();
+        if (isset($_SESSION['idUsuario'])) {
+            
+        $idUsuario = $_SESSION['idUsuario'];
+        $nombre = $_SESSION['nombre'];
+            
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +25,23 @@
                 <a href="index.html"><img class="logo" src="./IMAGENES/LOGOlsbm2.png" alt=""></a>
                 <button class="btn-nav"><span class="bi bi-list"></span></button>
                 <ul class="nav-list">
-                    <li><button><a href="index.html#PROGRAMA">PROGRAMA</a></button></li>
-                    <li><button><a href="">VOTACIÓN</a></button></li>
-                    <li><button><a href="index.html#Patrocinadores">PATROCINADORES</a></button></li>
-                    <li><button><a href="nosotros.html">NOSOTROS</a></button></li>
-                    <li><button><a href="InicioSesionEmpresa.html" id="iniciar">INICIAR SESIÓN</a></button></li>
+                    <li><button><a href="index.php#PROGRAMA">PROGRAMA</a></button></li>
+                    <li><button><a href="participantes.php">VOTACIÓN</a></button></li>
+                    <li><button><a href="index.php#Patrocinadores">PATROCINADORES</a></button></li>
+                    <li><button><a href="nosotros.php">NOSOTROS</a></button></li>
+                    <li><button>
+                        <?php
+                        if(!isset($nombre)){
+                            echo '<a href="InicioSesionEmpresa.html" id="iniciar">Iniciar Sesión</a>';
+                        }elseif($_SESSION['tipo']=='empresa'){
+                            echo '<a href="paginaPrivada.php">'.$nombre.'</a>';
+                        }elseif($_SESSION['tipo']=='visitante'){
+                            echo '<a href="perfil.php">'.$nombre.'</a>';
+                        }elseif ($_SESSION['tipo'] == 'administrador') {
+                            echo '<a href="admin.php">'.$nombre.'</a>';
+                        }
+                        ?>
+                    </button></li>
                 </ul>
             </div>
         </nav>
